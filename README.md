@@ -4,7 +4,7 @@
 
 # Vulnerability Management: Custom Scan Template Development & Execution
 
-This project successfully demonstrated the creation and use of a customized vulnerability scan template within a controlled environment. After intentionally introducing known vulnerabilities, a reusable scan template was configured and executed to assess the system. The scan successfully detected the injected vulnerabilities and generated structured reporting based on the defined template settings. This project reinforced the importance of standardized scanning procedures, repeatability in vulnerability assessments, and understanding how scan configurations influence detection accuracy and reporting outcomes.
+This project successfully demonstrated the creation and use of a customized vulnerability scan template within a controlled environment. A reusable scan template was configured and executed to assess the system. The scan successfully detected the injected vulnerabilities and generated structured reporting based on the defined template settings. This project reinforced the importance of standardized scanning procedures, repeatability in vulnerability assessments, and understanding how scan configurations influence detection accuracy and reporting outcomes.
 
 ---
 
@@ -17,8 +17,7 @@ This project successfully demonstrated the creation and use of a customized vuln
 ---
 
 ## Lab Objectives
-
-- Intentionally introduce known vulnerabilities into a test environment  
+ 
 - Configure and customize a vulnerability scan template  
 - Define scan policies, scope, and assessment settings  
 - Execute a vulnerability scan using the custom template  
@@ -39,22 +38,11 @@ This project successfully demonstrated the creation and use of a customized vuln
 
 ---
 
-### 1) Create Vulnerabilities
+### 1) Create Scan Template
 
 1. Log into the **Virtual Machine** and disable **Windows Firewalls**
-2. Open the **Computer Management** settings and create a **user** named **Administrator** then add to the **Administrators** group
-3. Add the **Guest** user to the **Administrator** group as well
-
-<p align="center">
-  <img width="790" height="479" alt="Capture2" src="https://github.com/user-attachments/assets/7732e9da-1ed8-44e7-9592-0c67460317e8" />
-</p>
-
----
-
-### 2) Create Scan Template
-
-1. Log into **Tenable** and select **Create Scan Template** for an **Advanced Network Scan**
-2. In the **Basic** tab make the following changes
+2. Log into **Tenable** and select **Create Scan Template** for an **Advanced Network Scan**
+3. In the **Basic** tab make the following changes
    - Turn on **Start the Remote Registry service during the scan**
    - Turn on **Enable administrative shares during the scan**
    - Turn on **Start the Server service during the scan**
@@ -63,7 +51,7 @@ This project successfully demonstrated the creation and use of a customized vuln
   <img width="1340" height="171" alt="Capture3" src="https://github.com/user-attachments/assets/bb8cfdcc-edba-41dc-983b-a36d6b55ba4b" />
 </p>
 
-3. In the **Discovery** tab make the following changes:
+4. In the **Discovery** tab make the following changes:
    - Turn on **Ping the remote host**
    - Turn on **Use fast network discovery**
    - Turn on the **TCP** Network Port Scanner
@@ -76,7 +64,7 @@ This project successfully demonstrated the creation and use of a customized vuln
   <img width="598" height="107" alt="Capture5" src="https://github.com/user-attachments/assets/cb6a4bba-aaf6-4661-a179-5edb7be60368" />
 </p>
 
-4. In the **Assessments** tab make the following changes:
+5. In the **Assessments** tab make the following changes:
    - Turn on **Perform thorough tests**
    - Turn off **Only use credentials provided by the user**
   
@@ -88,14 +76,14 @@ This project successfully demonstrated the creation and use of a customized vuln
   <img width="576" height="97" alt="Capture7" src="https://github.com/user-attachments/assets/ddf077d8-23be-4702-b6c5-cc4a81c7ec1e" />
 </p>
 
-5. On the **Report** tab add the credentials for the **Virtual Machine**
-6. On the **Compliance** tab add the **DISA Microsoft Windows 11 STIG**
+6. On the **Report** tab add the credentials for the **Virtual Machine**
+7. On the **Compliance** tab add the **DISA Microsoft Windows 11 STIG**
 
 <p align="center">
   <img width="611" height="600" alt="Untitled Diagram drawio" src="https://github.com/user-attachments/assets/a614bf86-b875-40ad-9a06-05f1023d1257" />
 </p>
 
-7. On the **Plugins** tab enable the following plugins:
+8. On the **Plugins** tab enable the following plugins:
    - **General**
    - **Settings**
    - **Windows**
@@ -107,17 +95,17 @@ This project successfully demonstrated the creation and use of a customized vuln
   <img width="1515" height="241" alt="Capture9" src="https://github.com/user-attachments/assets/45486979-2689-4230-9c6b-b1fc6efc7ee1" />
 </p>
 
-8. Save the Template
+9. Save the Template
 
 ---
 
-### 3) Scan Using Template
+### 2) Scan Using Template
 
 1. Create **User Defined** scan using the recently created template
 2. Make the following changes to scan then launch scan:
    - **Scanner:** Local Scan Engine
    - **Targets:** `<Windows 11 VM private IP address>`
-3. Once the scan is complete check the **vulnerabilities log**
+3. Once the scan is complete check the **vulnerability log**
 
 <p align="center">
   <img width="1353" height="439" alt="Capture10" src="https://github.com/user-attachments/assets/8e3543b4-ba44-4fd8-bc39-fb6df019357f" />
@@ -132,11 +120,9 @@ This project successfully demonstrated the creation and use of a customized vuln
 ---
 
 ## Outcome 
-
-- Successfully created controlled vulnerabilities for testing purposes  
+  
 - Built and configured a reusable vulnerability scan template  
 - Executed a standardized scan using the custom configuration  
-- Identified injected vulnerabilities through template-based scanning  
 - Demonstrated consistency and repeatability in vulnerability assessments
 
 ---
@@ -148,7 +134,5 @@ This project successfully demonstrated the creation and use of a customized vuln
 - Security Assessment  
 - Risk Identification  
 - Security Testing Methodology  
-- Scan Policy Customization  
-- Controlled Lab Environment Setup  
-- Vulnerability Analysis  
+- Scan Policy Customization     
 - Standardized Security Procedures  
