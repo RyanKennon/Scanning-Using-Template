@@ -91,4 +91,13 @@
 2. Make the following changes to scan then launch scan:
    - **Scanner:** Local Scan Engine
    - **Targets:** `<Windows 11 VM private IP address>`
-3. 
+3. Once the scan is complete check the **vulnerabilities log**
+
+## Capture 10
+
+4. Select the vulnerability and find the **description** and **solution**
+
+## Capture 11
+
+---
+
